@@ -5,21 +5,21 @@ function returnAiueo() {
 }
 
 function getDayOfWeek(date) {
-  // 日付オブジェクトを作成
+  // Create date object
   const dateObj = new Date(date);
   
-  // 曜日の配列（0=日曜日, 1=月曜日, ...）
+  // Array of day names (0=Sunday, 1=Monday, ...)
   const dayNames = [
-    '日曜日',  // Sunday
-    '月曜日',  // Monday
-    '火曜日',  // Tuesday
-    '水曜日',  // Wednesday
-    '木曜日',  // Thursday
-    '金曜日',  // Friday
-    '土曜日'   // Saturday
+    'Sunday',
+    'Monday', 
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
   ];
   
-  // getDay()で曜日のインデックス（0-6）を取得
+  // Get day index (0-6) using getDay()
   const dayIndex = dateObj.getDay();
   
   return dayNames[dayIndex];
@@ -27,10 +27,10 @@ function getDayOfWeek(date) {
 
 console.log(returnAiueo()); // 追加
 
-// 日付から曜日を取得する例
-console.log('今日の曜日:', getDayOfWeek(new Date()));
-console.log('2024年1月1日の曜日:', getDayOfWeek('2024-01-01'));
-console.log('2024年12月25日の曜日:', getDayOfWeek('2024-12-25'));
+// Get day of week from date examples
+console.log('Today\'s day of week:', getDayOfWeek(new Date()));
+console.log('Day of week for 2024-01-01:', getDayOfWeek('2024-01-01'));
+console.log('Day of week for 2024-12-25:', getDayOfWeek('2024-12-25'));
 
 fs.readFile('txt/sample.txt', 'utf8', (err, data) => {
   if (err) {
